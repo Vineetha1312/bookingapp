@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading, error } = useFetch("https://bookingapp-api-gray.vercel.app/hotels?featured=true");
+  const { data, loading, error } = useFetch("/hotels?featured=true");
 
   return (
     <div className="fp">
