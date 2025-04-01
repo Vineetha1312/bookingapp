@@ -44,3 +44,95 @@
 .fpRating>span{
   font-size: 14px;
 }
+
+
+
+
+
+
+
+
+
+/* Container for the entire featured properties section */
+.fp {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* List of featured properties */
+.fpList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Individual property item */
+.fpItem {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fpItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Property image */
+.fpImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Property details */
+.fpDetails {
+  padding: 15px;
+}
+
+.fpName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.fpCity {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.fpPrice {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Rating section */
+.fpRating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fpRating button {
+  background-color: #003580;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.fpRating span {
+  font-size: 14px;
+  color: #666;
+}

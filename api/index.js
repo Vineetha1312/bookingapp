@@ -19,7 +19,13 @@ const app = express();
 // Middlewares
 app.use(cookieParser())
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin:[""],
+        methods:["POST", "GET"],
+        credentials : true
+    }
+))
 
 app.use("/api/hotels", hotelsRouter)
 app.use("/api/rooms", roomsRouter)
