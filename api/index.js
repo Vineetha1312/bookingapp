@@ -19,13 +19,10 @@ const app = express();
 // Middlewares
 app.use(cookieParser())
 app.use(express.json())
-app.use(cors(
-    {
-        origin:["https://bookingapp-black.vercel.app"],
-        methods:["POST", "GET"],
-        credentials : true
-    }
-))
+app.use(cors({
+  origin: ['https://bookingapp-black.vercel.app', 'https://bookingapp-admin.vercel.app/login'],
+  credentials: true
+}));
 
 app.use("/api/hotels", hotelsRouter)
 app.use("/api/rooms", roomsRouter)
