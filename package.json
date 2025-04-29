@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env CI=false react-scripts build"
+    "build": "cd apps/admin && npm run build && cd ../../apps/client && npm run build"
   },
   "keywords": [],
   "author": "",
