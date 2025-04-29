@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=Berlin,Madrid,London"
+    "https://bookingapp-api-gray.vercel.app/hotels/countByCity?cities=Berlin,Madrid,London"
   );
   return (
     <div className="featured">
