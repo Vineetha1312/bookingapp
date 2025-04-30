@@ -1,13 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "apps/admin/package.json", "use": "@vercel/static-build" },
-      { "src": "apps/client/package.json", "use": "@vercel/static-build" },
-      { "src": "api/package.json", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/admin(/.*)?", "dest": "apps/admin" },
-      { "src": "/(.*)", "dest": "apps/client" },
-      { "src": "/api(/.*)?", "dest": "api" }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" },
+    { "src": "admin/package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } },
+    { "src": "client/package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } }
+  ],
+  "routes": [
+    { "src": "/admin/(.*)", "dest": "admin" },
+    { "src": "/api/(.*)", "dest": "api" },
+    { "src": "/(.*)", "dest": "client" }
+  ]
+}
